@@ -56,7 +56,7 @@ function Overview(props) {
 
             <Text style={styles.ratingTitleMeta}>Metascore</Text>
 
-            <Text style={styles.ratersNum}>1.1M</Text>
+            <Text style={styles.ratersNum}>46 critic reviews</Text>
           </View>
         </View>
       </View>
@@ -102,32 +102,35 @@ const styles = StyleSheet.create({
     height: 100
   },
   ratingContainer: {
-    height: 70,
+    height: 80,
     flexDirection: "row",
     justifyContent: "space-around"
     // backgroundColor: "green"
   },
   iconTextContainer: {
     marginTop: 10,
-    width: 70,
+    width: 80,
     alignItems: "center"
   },
 
   ratingIMDB: {
-    flexDirection: "row"
+    flexDirection: "row",
+    alignItems: "flex-end"
   },
   ratingIMDBNum: {
     color: "white",
     fontSize: 14,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    lineHeight: 14
   },
   ratingIMDBDen: {
     color: "white",
-    fontSize: 12
+    fontSize: 12,
+    lineHeight: 14
   },
   ratersNum: {
     color: "#636363",
-    fontSize: 12
+    fontSize: 11
   },
   ratingComment: {
     color: "white",

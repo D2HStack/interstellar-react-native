@@ -1,16 +1,17 @@
 import React from "react";
 import { Text, Image, View, StyleSheet } from "react-native";
 
-function ImageText({ url, actor, role }) {
-  console.log("url", url);
+// require("../assets/images/Mattew.jpg")
+function ImageText({ image, actor, character }) {
+  console.log("img", image);
   //../assets/images/Mattew.jpg"
   // #2E2E2E
   return (
     <View style={styles.container}>
       <Image
-        source={require("../assets/images/Mattew.jpg")}
+        source={image}
         style={{
-          height: 150,
+          height: 160,
           width: 120,
           resizeMode: "cover",
           marginRight: 20
@@ -18,7 +19,13 @@ function ImageText({ url, actor, role }) {
       ></Image>
       <View style={{ backgroundColor: "#252525", width: 120 }}>
         <Text
-          style={{ color: "white", fontSize: 10, width: 80, marginTop: 10 }}
+          style={{
+            color: "white",
+            fontSize: 10,
+            width: 80,
+            marginTop: 10,
+            marginLeft: 10
+          }}
           numberOfLines={1}
         >
           {actor}
@@ -28,11 +35,13 @@ function ImageText({ url, actor, role }) {
             fontSize: 10,
             width: 80,
             marginTop: 5,
-            color: "#636363"
+            color: "#636363",
+            marginLeft: 10,
+            marginBottom: 10
           }}
           numberOfLines={1}
         >
-          {role}
+          {character}
         </Text>
       </View>
     </View>

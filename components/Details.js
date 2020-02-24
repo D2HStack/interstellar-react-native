@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View, StyleSheet, ScrollView } from "react-native";
 import ImageText from "../components/ImageText";
+import images from "../assets/data/img-data";
 
 function Details(props) {
   return (
@@ -18,23 +19,17 @@ function Details(props) {
         </Text>
       </View>
       <View style={{ marginTop: 10 }}>
-        <ScrollView horizontal={true}>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <View style={{ flexDirection: "row" }}>
-            <ImageText
-              url="../assets/images/Mattew.jpg"
-              actor="Matthew McConaughey"
-              role="Cooper"
-            ></ImageText>
-            <ImageText
-              url="../assets/images/Mattew.jpg"
-              actor="Matthew McConaughey"
-              role="Cooper"
-            ></ImageText>
-            <ImageText
-              url="../assets/images/Mattew.jpg"
-              actor="Matthew McConaughey"
-              role="Cooper"
-            ></ImageText>
+            {images.map(item => {
+              return (
+                <ImageText
+                  image={item.image}
+                  actor={item.actor}
+                  character={item.character}
+                ></ImageText>
+              );
+            })}
           </View>
         </ScrollView>
 
